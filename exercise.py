@@ -1,0 +1,58 @@
+import sys
+
+
+# Exercise 1
+def test_1():
+    score = int(input("Enter your score? "))
+
+    if score <= 60:
+        print("F")
+        print("Fail")
+    elif 60 <= score <= 69:
+        print("D")
+        print("Poor")
+    elif 70 <= score <= 79:
+        print("C")
+        print("Average")
+    elif 80 <= score <= 89:
+        print("B")
+        print("Good")
+    else:
+        print("A")
+        print("Excellent")
+
+
+# Exercise 2
+def test_2():
+    number = int(input("number? "))
+
+    if number % 2 == 0:
+        print("number even")
+    elif number % 2 != 0:
+        print("number odd")
+
+
+# Exercise 3
+def test_3():
+    for number in range(1, 31):
+        if number % 2 == 0:
+            print(number)
+            print("even")
+        elif number % 2 != 0:
+            print(number)
+            print("odd")
+
+
+tests = {"test_1": test_1, "test_2": test_2, "test_3": test_3}
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        command = sys.argv[1]
+
+        if command in tests:
+            tests[command]()
+
+        else:
+            print("Invalid command")
+    else:
+        print("Please enter a command")
