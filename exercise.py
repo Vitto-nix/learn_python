@@ -43,7 +43,23 @@ def test_3():
             print("odd")
 
 
-tests = {"test_1": test_1, "test_2": test_2, "test_3": test_3}
+# Exercise 4
+def test_4():
+    total_sum = 0
+
+    while True:
+        user_input = input("(یا 'پایان' برای خروج)یک عدد وارد کنید: ")
+
+        if user_input == "پایان":
+            break
+
+        total_sum += int(user_input)
+        print(f"جمع فعلی: {total_sum}")
+
+    print(f"جمع نهایی: {total_sum}")
+
+
+tests = {"test_1": test_1, "test_2": test_2, "test_3": test_3, "test_4": test_4}
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

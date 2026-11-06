@@ -8,7 +8,6 @@ def part_1():
     favorite_game = "GTA sa"
     print(name)
     print(age)
-    print(age)
     print(favorite_game)
 
 
@@ -58,12 +57,28 @@ def part_3_1():
     print("افرین درست حدس زدی")
 
 
+# part 4
+def part_4():
+    secret_number = 7
+    guess = 0
+
+    while guess != secret_number:
+        guess = int(input("یک عدد صحیح بزن: "))
+        if guess < secret_number:
+            print("بزرگ تره ^")
+        elif guess > secret_number:
+            print("کوچک تره !")
+        else:
+            print("افرین درست حدس زدی ")
+
+
 parts = {
     "part_1": part_1,
     "part_2": part_2,
     "part_2_1": part_2_1,
     "part_3": part_3,
     "part_3_1": part_3_1,
+    "part_4": part_4,
 }
 
 if __name__ == "__main__":
