@@ -28,7 +28,7 @@ def test_2():
 
     if number % 2 == 0:
         print("number even")
-    elif number % 2 != 0:
+    else:
         print("number odd")
 
 
@@ -59,7 +59,37 @@ def test_4():
     print(f"جمع نهایی: {total_sum}")
 
 
-tests = {"test_1": test_1, "test_2": test_2, "test_3": test_3, "test_4": test_4}
+# Exercise 5
+def test_5():
+    def add_numbers(a, b):
+        result = a + b
+        return result
+
+    num1 = int(input("عدد اول: "))
+    num2 = int(input("عدد دوم: "))
+
+    total = add_numbers(num1, num2)
+    print(f"جمع: {total}")
+
+# 5.1
+    def calculate_area(length, width):
+        area = length * width
+        return area
+
+    length = float(input("طول مستطیل: "))
+    width = float(input("عرض مستطیل: "))
+
+    result = calculate_area(length, width)
+    print(f"مساحت مسطتیل: {result}")
+
+
+tests = {
+    "test_1": test_1,
+    "test_2": test_2,
+    "test_3": test_3,
+    "test_4": test_4,
+    "test_5": test_5,
+}
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
