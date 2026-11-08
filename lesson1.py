@@ -72,16 +72,24 @@ def part_4():
             print("افرین درست حدس زدی ")
 
 
-
 # part 5
 def part_5():
     def greet_user(name):
         print(f"سلام {name}! خوش امدی. ")
-        
+
     greet_user("Saba")
     greet_user("Mohammd")
-    
-    
+
+
+# part 6
+def part_6():
+    my_heroes = ["Batman", "Spider-man", "Iron man"]
+    print(my_heroes[0])
+    my_heroes.append("Superman")
+    my_heroes.remove("Iron man")
+    print(my_heroes)
+
+
 parts = {
     "part_1": part_1,
     "part_2": part_2,
@@ -89,7 +97,8 @@ parts = {
     "part_3": part_3,
     "part_3_1": part_3_1,
     "part_4": part_4,
-    "part_5": part_5
+    "part_5": part_5,
+    "part_6": part_6,
 }
 
 if __name__ == "__main__":

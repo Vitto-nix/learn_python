@@ -71,7 +71,7 @@ def test_5():
     total = add_numbers(num1, num2)
     print(f"جمع: {total}")
 
-# 5.1
+    # 5.1
     def calculate_area(length, width):
         area = length * width
         return area
@@ -83,12 +83,39 @@ def test_5():
     print(f"مساحت مسطتیل: {result}")
 
 
+# Exercise 6
+def test_6():
+    favorite_foods = ["pizza", "Burger", "Kebab", "Pasta", "Salad"]
+    print("اولین غذای من: ", favorite_foods[0])
+    new_food = input("اسم یک غذای جدید: ")
+    favorite_foods.append(new_food)
+    print("لیست کامل: ")
+    for food in favorite_foods:
+        print(f"- {food}")
+
+
+# Exercise 7
+def test_7():
+    grades = []
+
+    for i in range(5):
+        grade = float(input(f"نمره دانش اموز {i + 1}: "))
+        grades.append(grade)
+
+    average = sum(grades) / len(grades)
+    print(f"میانگین نمرات: {average:.2f}")
+    print(f"بالاترین نمره: {max(grades)}")
+    print(f"پایین ترین نمره: {min(grades)}")
+
+
 tests = {
     "test_1": test_1,
     "test_2": test_2,
     "test_3": test_3,
     "test_4": test_4,
     "test_5": test_5,
+    "test_6": test_6,
+    "test_7": test_7,
 }
 
 if __name__ == "__main__":
