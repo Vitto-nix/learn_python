@@ -93,9 +93,7 @@ def test_6():
     for food in favorite_foods:
         print(f"- {food}")
 
-
-# Exercise 7
-def test_7():
+    # 6.1
     grades = []
 
     for i in range(5):
@@ -106,6 +104,24 @@ def test_7():
     print(f"میانگین نمرات: {average:.2f}")
     print(f"بالاترین نمره: {max(grades)}")
     print(f"پایین ترین نمره: {min(grades)}")
+
+
+# Exercise 7
+def test_7():
+    product = {"name": "Laptop", "price": 50000, "stock": 10}
+
+    print(f"قیمت: {product['price']}")
+
+    product["stock"] -= 1
+    print(f"موجودی جدی: {product['stock']}")
+
+    product["discount"] = 0.1
+
+    print(product)
+
+
+# 7.1
+# phonebook
 
 
 tests = {

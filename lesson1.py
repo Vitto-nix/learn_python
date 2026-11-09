@@ -90,6 +90,23 @@ def part_6():
     print(my_heroes)
 
 
+def part_7():
+    user_profile = {
+        "name": "Mohammad",
+        "age": "16",
+        "city": "Mashhad",
+        "is_active": True,
+    }
+
+    print(user_profile["name"])
+    print(user_profile["age"])
+
+    user_profile["email"] = "mmd1387s13@gmali.com"
+    user_profile["age"] = 17
+
+    print(user_profile)
+
+
 parts = {
     "part_1": part_1,
     "part_2": part_2,
@@ -99,6 +116,7 @@ parts = {
     "part_4": part_4,
     "part_5": part_5,
     "part_6": part_6,
+    "part_7": part_7,
 }
 
 if __name__ == "__main__":
