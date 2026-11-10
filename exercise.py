@@ -119,9 +119,44 @@ def test_7():
 
     print(product)
 
+    # 7.1
+    phonebook = {}
 
-# 7.1
-# phonebook
+    while True:
+        print("\n1.اضافه کردن \n2. جستجو\n3. نمایش همه\n4. خروج")
+        choice = input("انتخاب: ")
+
+        if choice == "1":
+            name = input("اسم: ")
+            phone = input("شماره: ")
+            phonebook[name] = phone
+            print(f"✅{name} اضافه شد!")
+
+        elif choice == "2":
+            name = input("اسم برای جستجو: ")
+            if name in phonebook:
+                print(f"📞{name}: {phonebook[name]}")
+            else:
+                print("پیدا نشد!❌ ")
+
+        elif choice == "3":
+            for name, phone in phonebook.items():
+                print(f"📞 {name}: {phone}")
+
+        else:
+            print("خداحافظ!")
+            break
+
+
+# Exercise 8
+def test_8():
+    try:
+        with open("my_journal.txt", "r") as file:
+            text = file.read()
+            words = text.split()
+            print(f"تعداد کلمات: {len(words)}")
+    except FileNotFoundError:
+        print("فایل ژورنال پیدا نشود!")
 
 
 tests = {
@@ -132,6 +167,7 @@ tests = {
     "test_5": test_5,
     "test_6": test_6,
     "test_7": test_7,
+    "test_8": test_8,
 }
 
 if __name__ == "__main__":

@@ -107,6 +107,39 @@ def part_7():
     print(user_profile)
 
 
+def part_8():
+    with open(
+        r"c:\users\ms3pc\Desktop\python\file Io\notes.txt", "w", encoding="utf-8"
+    ) as file:
+        file.write("سلام دنیا!\n")
+        file.write("من دارم پایتون یاد می‌گیرم. \n")
+
+    print("فایل ذخییره شد!")
+
+    # 8.1
+    try:
+        with open(
+            r"c:\users\ms3pc\Desktop\python\file Io\notes.txt", "r", encoding="utf-8"
+        ) as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError:
+        print("فایل پیدا نشد!")
+
+    # 8.2
+    with open(
+        r"c:\users\ms3pc\Desktop\python\file Io\notes.txt", "r", encoding="utf-8"
+    ) as f:
+        lines = f.readlines()
+        print(lines)
+    # 8.3
+    with open(
+        r"c:\users\ms3pc\Desktop\python\file Io\notes.txt", "r", encoding="utf-8"
+    ) as f:
+        for line in f:
+            print(line.strip())
+
+
 parts = {
     "part_1": part_1,
     "part_2": part_2,
@@ -117,6 +150,7 @@ parts = {
     "part_5": part_5,
     "part_6": part_6,
     "part_7": part_7,
+    "part_8": part_8,
 }
 
 if __name__ == "__main__":
