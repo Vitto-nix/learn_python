@@ -159,6 +159,18 @@ def test_8():
         print("فایل ژورنال پیدا نشود!")
 
 
+# Exercise 9
+def test_9():
+    import random
+    import string
+    
+    def generate_password(length=12):
+        characters = string.ascii_letters + string.digits + "!@#$%"
+        password = ''.join(random.choice(characters) for _ in range(length))
+        return password
+    
+    print("رمز عبور جدید:", generate_password())
+
 tests = {
     "test_1": test_1,
     "test_2": test_2,
@@ -168,6 +180,7 @@ tests = {
     "test_6": test_6,
     "test_7": test_7,
     "test_8": test_8,
+    "test_9": test_9,
 }
 
 if __name__ == "__main__":

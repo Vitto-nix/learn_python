@@ -140,6 +140,23 @@ def part_8():
             print(line.strip())
 
 
+# part 9
+def part_9():
+    import math
+    import random
+    
+    print(math.sqrt(16))
+    print(random.randint(1, 10))
+# 9.1
+    from math import pi, sqrt
+    
+    print(f"عدد پی: {pi}")
+    print(f"جذر 25: {sqrt(25)}")
+# 9.2
+    import requests
+    
+    requests = requests.get("https://api.github.com")
+    print(requests.status_code)    
 parts = {
     "part_1": part_1,
     "part_2": part_2,
@@ -151,6 +168,7 @@ parts = {
     "part_6": part_6,
     "part_7": part_7,
     "part_8": part_8,
+    "part_9": part_9,
 }
 
 if __name__ == "__main__":
