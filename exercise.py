@@ -163,13 +163,14 @@ def test_8():
 def test_9():
     import random
     import string
-    
+
     def generate_password(length=12):
         characters = string.ascii_letters + string.digits + "!@#$%"
-        password = ''.join(random.choice(characters) for _ in range(length))
+        password = "".join(random.choice(characters) for _ in range(length))
         return password
-    
+
     print("رمز عبور جدید:", generate_password())
+
 
 tests = {
     "test_1": test_1,

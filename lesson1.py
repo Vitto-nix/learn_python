@@ -144,19 +144,58 @@ def part_8():
 def part_9():
     import math
     import random
-    
+
     print(math.sqrt(16))
     print(random.randint(1, 10))
-# 9.1
+
+    # 9.1
     from math import pi, sqrt
-    
+
     print(f"عدد پی: {pi}")
     print(f"جذر 25: {sqrt(25)}")
-# 9.2
+
+    # 9.2
     import requests
-    
+
     requests = requests.get("https://api.github.com")
-    print(requests.status_code)    
+    print(requests.status_code)
+
+
+# part 10
+def part_10():
+    class Hero:
+        def __init__(self, name, hp, atk):
+            self.name = name
+            self.hp = hp
+            self.atk = atk
+
+        def attack(self, target):
+            target.hp -= self.atk
+            print(f"{self.name} به {target.name} حمله کرد")
+
+    ali = Hero("علی", 100, 20)
+    sara = Hero("سارا", 100, 25)
+
+    ali.attack(sara)
+
+    # 10.1
+    class Car:
+        wheels = 4
+
+        def __init__(self, brand, color, speed=0):
+            self.brand = brand
+            self.color = color
+            self.speed - speed
+
+        def accelerate(self, increment):
+            self.speed += increment
+            print(f"{self.brand} در سرعت {self.speed} کیلومتر بر ساعته")
+
+        def stop(self):
+            self.speed = 0
+            print(f"{self.brand} ایستاد.")
+
+
 parts = {
     "part_1": part_1,
     "part_2": part_2,
@@ -169,6 +208,7 @@ parts = {
     "part_7": part_7,
     "part_8": part_8,
     "part_9": part_9,
+    "part_10": part_10,
 }
 
 if __name__ == "__main__":
